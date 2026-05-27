@@ -1,0 +1,503 @@
+{
+  "items": [
+    {
+      "groupid": "custom",
+      "urlOrPath": "",
+      "remark": "Самостоятельная настройка",
+      "editAble": true,
+      "groups": [
+        {
+          "groupid": "custom",
+          "name": "✅RUS_gov",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "geosite:available-only-inside@ru",
+            "geosite:category-gov-ru"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "🛑 Reklama",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "acl:BanAD",
+            "acl:BanProgramAD",
+            "acl:BanADCompany",
+            "geosite:category-ads",
+            "geosite:category-ads-all",
+            "geosite:category-ads-all@ads"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "🛑 Malware",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "geosite:malware",
+            "geoip:malware",
+            "geoip:phishing",
+            "geosite:phishing",
+            "geosite:cryptominers"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "🛑 Analytics block",
+          "type": "",
+          "or": true,
+          "domain_suffix": [
+            ".appcenter.ms",
+            ".app-measurement.com",
+            ".firebase.io",
+            ".crashlytics.com",
+            ".google-analytics.com",
+            ".yadro.ru"
+          ],
+          "domain": [
+            "mc.yandex.md",
+            "an.yandex.ru",
+            "mc.yandex.ru",
+            "metrika.yandex.ru",
+            "an.mail.ru",
+            "ad.mail.ru",
+            "ok.ru",
+            "googleads.g.doubleclick.net",
+            "firebaseinstallations.googleapis.com",
+            "sdk-api.apptracer.ru"
+          ],
+          "domain_keyword": [
+            "yastatic",
+            "telemetry",
+            "counter",
+            "onesignal"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "✅ 1 Always direct",
+          "type": "",
+          "or": true,
+          "domain": [
+            "1dot1dot1dot1.cloudflare-dns.com",
+            "dns.google.com",
+            "dns.quad9.net",
+            "dns.comss.one",
+            "dns.adguard.com",
+            "dns.nextdns.io"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "🔑 2 Always VPN",
+          "type": "",
+          "or": true,
+          "domain": [
+            "google.com.ua",
+            "viber.com",
+            "canva.com",
+            "esthetical-b-school.com",
+            "phncdn.com",
+            "temp-mail.org",
+            "tempmail.plus",
+            "jut.su",
+            "ntc.party",
+            "kinogo.film",
+            "spaceproxy.net",
+            "flibusta.is",
+            "qms.ru",
+            "2ip.io",
+            "seeip.org"
+          ],
+          "domain_keyword": [
+            "pornhub",
+            "animego",
+            "strava",
+            "familysearch",
+            "capcut",
+            "SWIZ",
+            "monobank",
+            "privatbank",
+            "oschadbank",
+            "herb",
+            "getcourse",
+            "forex",
+            "events",
+            "superapp",
+            "x-minus",
+            "eschuhe",
+            "pexels",
+            "esthetical",
+            "spotify",
+            "rutracker"
+          ],
+          "rule_set_build_in": [
+            "geosite:spotify",
+            "acl:Spotify"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "🛑 3 Always block",
+          "type": "",
+          "or": true,
+          "domain_suffix": [
+            ".vk.ru",
+            ".okcdn.ru",
+            ".ok.ru",
+            ".mradx.net"
+          ],
+          "domain": [
+            "ok.ru",
+            "vk.com",
+            "t7.a.market.xiaomi.com"
+          ],
+          "package": [
+            "com.xiaomi.xmsf",
+            "com.xiaomi.mtb",
+            "com.mi.globalminusscreen"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "🟢 WhatsApp",
+          "type": "",
+          "or": true,
+          "domain_suffix": [
+            ".whatsapp.net"
+          ],
+          "rule_set_build_in": [
+            "geosite:whatsapp",
+            "acl:Whatsapp"
+          ],
+          "package": [
+            "com.whatsapp"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "📲 Telegram mod",
+          "type": "",
+          "or": true,
+          "domain": [
+            "translate-pa.googleapis.com"
+          ],
+          "rule_set_build_in": [
+            "geoip:telegram",
+            "geosite:telegram"
+          ],
+          "package": [
+            "org.telegram.messenger.web",
+            "org.telegram.messenger",
+            "nu.gpu.nagram"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "🐱 GitHub",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "geoip:github",
+            "geosite:github"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "🍎 Apple",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "geosite:apple",
+            "geosite:apple@ads",
+            "geosite:apple-dev",
+            "geosite:apple-pki",
+            "geosite:apple-update"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "🎮 Games",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "acl:Epic",
+            "acl:Origin",
+            "acl:Sony",
+            "acl:Steam",
+            "acl:Nintendo"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "Ⓜ️ Microsoft",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "geosite:microsoft",
+            "geosite:microsoft-dev",
+            "geosite:microsoft-pki"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "🔫 SuperCell",
+          "type": "",
+          "or": true,
+          "domain_keyword": [
+            "hayday",
+            "brawl",
+            "clash",
+            "blur",
+            "clashroyale",
+            "squadbusters"
+          ],
+          "port": [
+            9339
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "📹 YouTube",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "geosite:youtube"
+          ],
+          "package": [
+            "com.google.android.youtube"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "💬 AI",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "acl:Gemini",
+            "acl:Claude",
+            "acl:ClaudeAI",
+            "geosite:google-gemini",
+            "geosite:perplexity",
+            "geoip:openai",
+            "acl:OpenAi",
+            "geosite:openai"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "🌏 GFW mod",
+          "type": "",
+          "or": true,
+          "domain_keyword": [
+            "rutracker",
+            "ntc.party",
+            "kinogo.film",
+            "spaceproxy.net",
+            "flibusta.is"
+          ],
+          "rule_set_build_in": [
+            "geoip:blocked@ru",
+            "geoip:blocked-community@ru",
+            "geosite:blocked@ru",
+            "geoip:re-filter@ru"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "🛑 malware",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "geosite:malware",
+            "geoip:malware",
+            "geoip:phishing",
+            "geosite:phishing",
+            "geosite:cryptominers"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "🇷🇺 Anticensor",
+          "type": "",
+          "or": true,
+          "rule_set": [
+            "geoip:blocked@ru",
+            "geosite:blocked@ru"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "🛑 Adblock",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "acl:BanAD",
+            "geosite:category-ads"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "🍃 AdblockPlus",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "acl:BanProgramAD",
+            "acl:BanADCompany"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "♊️ Google Gemini",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "acl:Gemini"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "🌏 Google Play",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "geosite:google-play"
+          ],
+          "package": [
+            "com.android.vending"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "📢 Google FCM",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "acl:GoogleFCM"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "🌏 Google",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "geosite:google",
+            "geoip:google"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "🎧 TikTok",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "geosite:tiktok"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "📸 Instagram",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "geosite:instagram"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "🎥 Netflix",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "geoip:netflix",
+            "geosite:netflix"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "📲 Discord",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "geosite:discord",
+            "acl:Discord"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "📲 WhatsApp",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "geosite:whatsapp",
+            "acl:Whatsapp"
+          ],
+          "package": [
+            "com.whatapp"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "📲 Telegram",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "geoip:telegram",
+            "geosite:telegram"
+          ],
+          "package": [
+            "org.telegram.messenger.web",
+            "org.telegram.messenger"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "💬 Claude",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "acl:Claude"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "💬 OpenAI",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "geoip:openai",
+            "geosite:openai"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "🎮 Game",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "acl:Epic",
+            "acl:Origin",
+            "acl:Sony",
+            "acl:Steam",
+            "acl:Nintendo"
+          ]
+        },
+        {
+          "groupid": "custom",
+          "name": "🌏 GFW",
+          "type": "",
+          "or": true,
+          "rule_set_build_in": [
+            "geoip:blocked@ru",
+            "geoip:blocked-community@ru",
+            "geosite:blocked@ru"
+          ]
+        }
+      ]
+    }
+  ],
+  "rule_set_items": []
+}
